@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
 
-export const Page = (props) => {
-
-  return <>
-    <h3>{props.page.title}</h3>
-  </>
-} 
-	
+export default Page = ({ page, setCurrentPage }) => {
+  return (
+    <>
+      <h3 onClick={({ target: { innerText } }) => setCurrentPage(innerText)}>
+        {page.title}
+      </h3>
+    </>
+  );
+};
